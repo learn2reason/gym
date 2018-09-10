@@ -4,11 +4,13 @@ http://arxiv.org/abs/1511.07275
 """
 from __future__ import division
 from gym.envs.algorithmic import algorithmic_env
+from gym.spaces import Box, Discrete
 
 class DuplicatedInputEnv(algorithmic_env.TapeAlgorithmicEnv):
     def __init__(self, duplication=2, base=5):
         self.duplication = duplication
         super(DuplicatedInputEnv, self).__init__(base=base, chars=True)
+        self.observation_space = Discrete((base+1)*10)
 
     def generate_input_data(self, size):
         res = []

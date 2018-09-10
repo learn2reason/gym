@@ -11,6 +11,14 @@ register(
 )
 
 register(
+    id='Copy-v2',
+    entry_point='gym.envs.algorithmic:CopyEnv2',
+    max_episode_steps=200,
+    reward_threshold=25.0,
+)
+
+
+register(
     id='RepeatCopy-v0',
     entry_point='gym.envs.algorithmic:RepeatCopyEnv',
     max_episode_steps=200,
@@ -24,6 +32,16 @@ register(
     max_episode_steps=200,
     reward_threshold=25.0,
 )
+
+
+register(
+    id='ReversedAddition-v2',
+    entry_point='gym.envs.algorithmic:ReversedAdditionEnv6',
+    kwargs={'rows' : 2},
+    max_episode_steps=200,
+    reward_threshold=25.0,
+)
+
 
 register(
     id='ReversedAddition3-v0',
@@ -41,8 +59,29 @@ register(
 )
 
 register(
+    id='DuplicatedInput-v2',
+    entry_point='gym.envs.algorithmic:DuplicatedInputEnv6',
+    max_episode_steps=200,
+    reward_threshold=9.0,
+)
+
+register(
     id='Reverse-v0',
     entry_point='gym.envs.algorithmic:ReverseEnv',
+    max_episode_steps=200,
+    reward_threshold=25.0,
+)
+
+register(
+    id='SingleMultiplication-v0',
+    entry_point='gym.envs.algorithmic:SingleMultiplicationEnv',
+    max_episode_steps=200,
+    reward_threshold=25.0,
+)
+
+register(
+    id='SingleMultiplication-v2',
+    entry_point='gym.envs.algorithmic:SingleMultiplicationEnv2',
     max_episode_steps=200,
     reward_threshold=25.0,
 )
