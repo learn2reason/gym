@@ -89,6 +89,7 @@ class ReversedAdditionEnv6(algorithmic_env.GridAlgorithmicEnv):
             newc.append(c)
             f_combs.append(newc)
         for c in all_combs:
+            # for d in [[2,1], [1,2], [2,2], [1,1], [2,0], [0,2]]:
             for d in [[2,1], [1,2], [2,2]]:
                 newc = []
                 newc.append([2,2])
